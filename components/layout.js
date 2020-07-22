@@ -1,7 +1,10 @@
 import Head from 'next/head'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
+import Link from 'next/link';
+import { Navbar, Nav } from "react-bootstrap";
+
+
 
 const name = 'DJ'
 export const siteTitle = 'Next.js Sample Website'
@@ -24,9 +27,19 @@ export default function Layout({ children, home }) {
                 <meta name="og:title" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
-            <nav class="navbar navbar-light bg-info">
-                <a class="navbar-brand" href="#">Navbar</a>
-            </nav>
+
+            <Navbar bg="light" expand="lg">
+                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Nav.Link href="#home">Home</Nav.Link>
+                        <Nav.Link href="#link">Link</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
+
+
             <header className={styles.header}>
                 {home ? (
                     <>
