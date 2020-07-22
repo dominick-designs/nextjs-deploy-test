@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { getSortedPostsData } from '../lib/posts'
 import Date from '../components/date'
 
+
+
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
@@ -12,6 +14,8 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
+
+        <button className="btn btn-success">OKBootstrap</button>
         <p>[Your Self Introduction]</p>
         <p>
           (This is a sample website - you’ll be building a site like this on{' '}
