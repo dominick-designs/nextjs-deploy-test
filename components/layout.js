@@ -6,8 +6,8 @@ import { Navbar, Nav } from "react-bootstrap";
 
 
 
-const name = 'DJ'
-export const siteTitle = 'Next.js Sample Website'
+const name = 'Dominick Inglese'
+export const siteTitle = 'Portfolio of Dominick Designs Web Studio LLC'
 
 export default function Layout({ children, home }) {
     return (
@@ -16,7 +16,7 @@ export default function Layout({ children, home }) {
                 <link rel="icon" href="/favicon.ico" />
                 <meta
                     name="description"
-                    content="Learn how to build a personal website using Next.js"
+                    content="Portfolio of Dominick Designs Web Studio LLC"
                 />
                 <meta
                     property="og:image"
@@ -29,12 +29,13 @@ export default function Layout({ children, home }) {
             </Head>
 
             <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                <Navbar.Brand href="#home">Portfolio</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">Link</Nav.Link>
+                        <Nav.Link href="/posts/first-post">Home</Nav.Link>
+                        <Nav.Link href="/posts/first-post">Link</Nav.Link>
+
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
@@ -44,18 +45,18 @@ export default function Layout({ children, home }) {
                 {home ? (
                     <>
                         <img
-                            src="/images/profile.jpg"
+                            src="/images/logo_512x512@2x.png"
                             className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-                            alt={name}
+                            alt={siteTitle}
                         />
-                        <h1 className={utilStyles.heading2Xl}>{name}</h1>
+                        <h1 className={utilStyles.heading2Xl}>{siteTitle}</h1>
                     </>
                 ) : (
                         <>
                             <Link href="/">
                                 <a>
                                     <img
-                                        src="/images/profile.jpg"
+                                        src="/images/logo_512x512@2x.png"
                                         className={`${styles.headerImage} ${utilStyles.borderCircle}`}
                                         alt={name}
                                     />
