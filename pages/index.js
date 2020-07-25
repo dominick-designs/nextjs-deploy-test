@@ -20,16 +20,16 @@ export default function Home({ allProjectData }) {
 
       <section className={utilStyles.headingMd}>
         <div className="row row-cols-1 row-cols-md-3">
-          {allProjectData.map((id) => (
-            <div className="col mb-4" key={id.params.id.id}>
+          {allProjectData.map((objectOfProjects) => (
+            < div className="col mb-4" key={objectOfProjects.params.id.id} >
               <div className="card h-100">
 
-                <Link href="/projects/[id]" as={`/projects/${id.params.id.id}`} passHref>
+                <Link href="/projects/[id]" as={`/projects/${objectOfProjects.params.id.id}`}>
 
-                  <img src={id.params.id.image_urls[0]} className="card-img-top" alt="..." />
+                  <img src={objectOfProjects.params.id.image_urls[0]} className="card-img-top" alt="..." />
                 </Link>
                 <div className="card-body">
-                  <h5 className="card-title">{id.params.id.project_name}</h5>
+                  <h5 className="card-title">{objectOfProjects.params.id.project_name}</h5>
                 </div>
               </div>
             </div>
@@ -43,7 +43,7 @@ export default function Home({ allProjectData }) {
         </div>
       </section>
 
-    </Layout>
+    </Layout >
   )
 }
 
