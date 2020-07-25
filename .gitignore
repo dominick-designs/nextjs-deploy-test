@@ -31,3 +31,5 @@ yarn-error.log*
 
 # backups
 /data/backups
+package-lock.json
+
