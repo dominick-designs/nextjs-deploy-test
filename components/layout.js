@@ -15,7 +15,7 @@ export default function Layout({ children, home }) {
             <Head>
                 <link rel="icon" href="/favicon.ico" />
                 <meta
-                    name="description"
+                    name="Portfolio"
                     content="Portfolio of Dominick Designs Web Studio LLC"
                 />
                 <meta
@@ -64,7 +64,7 @@ export default function Layout({ children, home }) {
                             </Link>
                             <h2 className={utilStyles.headingLg}>
                                 <Link href="/">
-                                    <a className={utilStyles.colorInherit}>{name}</a>
+                                    <a className={utilStyles.colorInherit}>{siteTitle}</a>
                                 </Link>
                             </h2>
                         </>
