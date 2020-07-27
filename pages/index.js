@@ -35,18 +35,10 @@ export default function Home({ allProjectData }) {
             </div>
           ))}
         </div>
-
-        <div className="btn-group" role="group" aria-label="Basic example">
-          <button type="button" className="btn btn-secondary">Github</button>
-          <button type="button" className="btn btn-secondary">Blog </button>
-          <button type="button" className="btn btn-secondary">About</button>
-        </div>
       </section>
-
     </Layout >
   )
 }
-
 
 export async function getStaticProps() {
   const allProjectData = getProjects()

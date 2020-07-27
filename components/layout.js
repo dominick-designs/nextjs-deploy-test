@@ -20,21 +20,23 @@ export default function Layout({ children, home }) {
                 />
                 <meta
                     property="og:image"
-                    content={`https://og-image.now.sh/${encodeURI(
+                    content={`/images/logo_512x512@2x.png${encodeURI(
                         siteTitle
-                    )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+                    )}`}
                 />
                 <meta name="og:title" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
 
             <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="#home">Portfolio</Navbar.Brand>
+                <Navbar.Brand href="/">Portfolio</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="/posts/first-post">Home</Nav.Link>
-                        <Nav.Link href="/posts/first-post">Link</Nav.Link>
+                        <Nav.Link href="https://github.com/dominick-designs/" target="_blank">Github</Nav.Link>
+                        <Nav.Link href="https://www.linkedin.com/company/dominick-designs-websites/" target="_blank">Linkedin</Nav.Link>
+                        <Nav.Link href="/about" >About</Nav.Link>
+                        <Nav.Link href="https://dominickdesigns.space/writings/" target="_blank">Writings</Nav.Link>
 
                     </Nav>
                 </Navbar.Collapse>
@@ -74,7 +76,7 @@ export default function Layout({ children, home }) {
             {!home && (
                 <div className={styles.backToHome}>
                     <Link href="/">
-                        <a>← Back to home</a>
+                        <a>← Back home</a>
                     </Link>
                 </div>
             )}

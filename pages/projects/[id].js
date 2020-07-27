@@ -7,25 +7,21 @@ import { Carousel, Alert, Card, Button, ListGroup } from 'react-bootstrap';
 export default function Project({ projectData }) {
     const router = useRouter();
     const { id } = router.query;
+
     const imageUrls = projectData[id].params.id.image_urls;
     const projectName = projectData[id].params.id.project_name;
     const projectDescription = projectData[id].params.id.description;
     const projectTechnologies = projectData[id].params.id.technologies;
     const projectLiveLink = projectData[id].params.id.live_link;
     const projectGitHubLink = projectData[id].params.id.github_link;
+
     const removeFirstImage = _.filter(imageUrls, (value, index) => {
         return index !== 0;
-    })
+    });
 
-    const mapTechnologies = _.map(projectTechnologies, (value, index) => {
-        return <ul >
-            <li key={index}>{value}</li>
-        </ul>
-    })
 
     return (
         <Layout>
-
             <Alert variant="light" className="text-center">
                 <hr />
                 <Alert.Heading> You are viewing the <span className="text-info"> {projectName}</span> project</Alert.Heading>
@@ -68,9 +64,11 @@ export default function Project({ projectData }) {
                     <Card className="h-100">
                         <Card.Header as="h5">Technologies</Card.Header>
                         <Card.Body>
-                            <Card.Text>
-                                {mapTechnologies}
-                            </Card.Text>
+                            {_.map(projectTechnologies, (value, index) => (
+                                <ul key={index} className="card-text">
+                                    <li >{value}</li>
+                                </ul>
+                            ))}
                         </Card.Body>
                     </Card>
                 </div>
@@ -92,7 +90,7 @@ export default function Project({ projectData }) {
                         <Card.Header as="h5">Github</Card.Header>
                         <Card.Body>
                             <Card.Text>
-                                Click the button below to view the Github repository for this project.
+                                Click the button below to view the Github repository.
     </Card.Text>
                             <Button href={projectGitHubLink} variant="primary">View Github Repo</Button>
                         </Card.Body>
