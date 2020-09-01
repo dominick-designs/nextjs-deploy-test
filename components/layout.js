@@ -13,7 +13,8 @@ export default function Layout({ children, home }) {
     return (
         <div className={styles.container}>
             <Head>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
                 <meta
                     name="Portfolio"
                     content="Portfolio of Dominick Designs Web Studio LLC"
