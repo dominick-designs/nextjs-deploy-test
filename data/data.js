@@ -191,7 +191,7 @@ const projects = [
     },
     {
         "id": "12",
-        "project_name": "This is a list of remaining projects from years prior to 2017.",
+        "project_name": "list of remaining projects from years prior to 2017.",
         "description": "Here you will find screenshots of nearly all other projects I've been involved with. This includes full and partial development; involves small locall businesses and nonprofits.",
         "technologies": [
             "WordPress",
