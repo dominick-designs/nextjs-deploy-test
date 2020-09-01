@@ -191,18 +191,18 @@ const projects = [
     },
     {
         "id": "12",
-        "project_name": "Chosin Few Non-Profit eCommerce and Membership Website",
-        "description": "Unique opportunity to present The Chosin Few mebership options, shop, and digest. Thank you for the opportunity to present to the world for the first time a website for the Chosin Few non-profit organization.",
+        "project_name": "This is a list of remaining projects from years prior to 2017.",
+        "description": "Here you will find screenshots of nearly all other projects I've been involved with. This includes full and partial development; involves small locall businesses and nonprofits.",
         "technologies": [
             "WordPress",
-            "Divi (by Elegant Themes)",
-            "Custom Contact form",
-            "WooCommerce Shop",
-            "Membership Options",
-            "Embedded Digest"
+            "Google Sites",
+            "Rapidweaver",
+            "Joomla!",
+            "Wix",
+            "Moodle"
         ],
-        "live_link": "https://chosinfew.org/",
-        "github_link": "https://chosinfew.org/",
+        "live_link": "https://bhaktabandhav.org/",
+        "github_link": "https://bhaktabandhav.org/",
         "image_urls": [
             "https://cookieless-files.fastsecure.website/code-subdomain/public/img/prev_clients/view-previous-clients-550.png",
             "https://cookieless-files.fastsecure.website/code-subdomain/public/img/prev_clients/portfolio_5366.jpg",
